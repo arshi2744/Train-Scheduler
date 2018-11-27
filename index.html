@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Train Scheduler</title>
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO"
+        crossorigin="anonymous">
+
+    <!-- CSS links -->
+    <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+    <!-- JQuery library -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+
+    <!-- Firebase database -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.1/firebase.js"></script>
+
+    <!-- Moment JS -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <link rel="icon" type="image/jpg" href="assets/images/train-favicon.png">
+
+</head>
+
+<style>
+    body {
+        background: lightgray;
+    }
+</style>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="jumbotron" style="background-image:url('assets/images/train-background.jpg');background-position: center;background-repeat: no-repeat;background-size: cover;color:white;text-align:right">
+                    <h1 class="display-4">Train Scheduler</h1>
+                    <p class="lead">Any time is train time.</p>
+                    <p>Build your train schedule below.</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <div class="card">
+                    <div class="card-header" style="background:royalblue;color:white">
+                        <strong>
+                            <i class="fa fa-table"></i>Current Train Schedule</strong>
+                    </div>
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <td style="padding-left:20px">
+                                    <strong>Train Name</strong>
+                                </td>
+                                <td style="padding-left:20px">
+                                    <strong>Destination</strong>
+                                </td>
+                                <td style="padding-left:20px">
+                                    <strong>Frequency (min)</strong>
+                                </td>
+                                <td style="padding-left:20px">
+                                    <strong>Next Arrival</strong>
+                                </td>
+                                <td style="padding-left:20px">
+                                    <strong>Minutes Away</strong>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+                <br>
+                <div class="card">
+                    <div class="card-header" style="background:royalblue;color:white">
+                        <strong><i class="fa fa-list-alt"></i>Add Train</strong>
+                    </div>
+                    <div class="card-body">
+                        <form role="form">
+                            <div class="form-group">
+                                <label for="name">Train Name</label>
+                                <input type="text" class="form-control" id="name">
+                            </div>
+                            <div class="form-group">
+                                <label for="role">Destination</label>
+                                <input type="text" class="form-control" id="destination">
+                            </div>
+                            <div class="form-group">
+                                <label for="start-date">First Train Time (HH:mm - military time)</label>
+                                <input type="text" class="form-control" id="first-train">
+                            </div>
+                            <div class="form-group">
+                                <label for="monthly-rate">Frequency (min)</label>
+                                <input type="text" class="form-control" id="frequency">
+                            </div>
+                            <button type="submit" class="btn btn-default" style="background:royalblue;color:white;" id="submit-button">
+                                <i class="fa fa-search"></i> Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Javascript file -->
+    <script src="assets/javascript/logic.js"></script>
+
+</body>
+
+</html>
