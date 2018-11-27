@@ -1,8 +1,7 @@
 # Train Scheduler
 
-Experience here: [Train Scheduler](https://brijamfitz.github.io/Train-Scheduler/)
+Experience here: [Train Scheduler](https://arshi2744.github.io/Train-Scheduler/)
 
-![image](assets/images/screenshot-train.png)
 
 This application allows a user to create their very own train schedule.
 
